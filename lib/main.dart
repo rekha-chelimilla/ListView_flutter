@@ -47,19 +47,18 @@ class ListLayout extends StatelessWidget {
 
 //cardsa and leading
 Widget _myEmployeeListView(BuildContext context) {
-  final titles = ['Android', 'iOS', 'Java Script'];
+  final technology = ['Android', 'iOS', 'Java Script'];
 
   final icons = [Icons.android, Icons.ios_share, Icons.javascript_rounded];
 
   return ListView.builder(
-    itemCount: titles.length,
+    itemCount: technology.length,
     itemBuilder: (context, index) {
       return Card(
         //                           <-- Card widget
         child: ListTile(
           leading: Icon(icons[index]),
-          title: Text(titles[index]),
-          trailing: Icon(Icons.keyboard_arrow_right),
+          title: Text(technology[index]),
         ),
       );
     },
